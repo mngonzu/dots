@@ -10,6 +10,7 @@ vim.opt.wrapmargin=0
 vim.opt.formatoptions:append{"t"}
 vim.keymap.set('n', '<leader>e', ":NvimTreeToggle")
 vim.keymap.set('n', '<leader>t', ":Twilight")
+vim.cmd(':set linespace=80')
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath)then
 	vim.fn.system({
@@ -23,4 +24,5 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup("plugins")
 vim.cmd.colorscheme "catppuccin-mocha"
 vim.cmd ('TwilightEnable')
+vim.cmd(':COQnow -s')
 

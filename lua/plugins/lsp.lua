@@ -11,10 +11,10 @@ return   {
 		},
 	{"neovim/nvim-lspconfig",
 	config = function()
-		require('lspconfig').clangd.setup{}
-		require'lspconfig'.lua_ls.setup{}
-		require'lspconfig'.tsserver.setup{}
-		require'lspconfig'.pyright.setup{}
+		require('lspconfig').clangd.setup(coq.lsp_ensure_capabilities())
+		require'lspconfig'.lua_ls.setup(coq.lsp_ensure_capabilities())
+		require'lspconfig'.tsserver.setup(coq.lsp_ensure_capabilities())
+		require'lspconfig'.pyright.setup(coq.lsp_ensure_capabilities())
 	end,
 	},
 	{"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
