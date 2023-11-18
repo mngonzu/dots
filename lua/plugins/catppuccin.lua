@@ -1,18 +1,18 @@
-return { "catppuccin/nvim", 
-	  name = "catppuccin", 
-	  priority = 1000, 
+return { "catppuccin/nvim",
+	  name = "catppuccin",
+	  priority = 1000,
 	  config = function()
 		require("catppuccin").setup(
-		{flavour = latte,
+		{flavour = Mocha,
 		     integrations = {coc_nvim = true,
 		     		     native_lsp = {
-    enabled = true,
-    virtual_text = {
-        errors = { "italic" },
-        hints = { "italic" },
-        warnings = { "italic" },
-        information = { "italic" },
-    },
+				     enabled = true,
+				     virtual_text = {
+			             errors = { "italic" },
+ 			             hints = { "italic" },
+                                     warnings = { "italic" },
+                                     information = { "italic" },
+  							    },
     underlines = {
         errors = { "underline" },
         hints = { "underline" },
@@ -22,7 +22,10 @@ return { "catppuccin/nvim",
     inlay_hints = {
         background = true,
     },
-},
+},					nvimtree = true,
+					treesitter = true,
+					rainbow_delimiters = true,
+
 		     		    }
 		})
 	end,
