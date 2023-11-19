@@ -25,4 +25,8 @@ require("lazy").setup("plugins")
 vim.cmd.colorscheme "catppuccin-mocha"
 vim.cmd ('TwilightEnable')
 vim.cmd(':COQnow -s')
-
+vim.api.nvim_create_autocmd({ "BufWritePost" }, {
+  callback = function()
+    require("lint").try_lint()
+  end,
+})

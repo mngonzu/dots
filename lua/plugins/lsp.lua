@@ -1,3 +1,4 @@
+local coq = require "coq"
 return   {
 	{"williamboman/mason.nvim",
 	config = function()
@@ -29,10 +30,10 @@ return   {
 			strategy = {
             [''] = require 'rainbow-delimiters'.strategy['local'],
 		    },
-		        query = {
+	    query = {
             [''] = 'rainbow-delimiters'},
 	    highlight ={
-		                'RainbowDelimiterRed',
+	    'RainbowDelimiterRed',
             'RainbowDelimiterYellow',
             'RainbowDelimiterBlue',
             'RainbowDelimiterOrange',
